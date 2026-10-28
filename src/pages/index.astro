@@ -1,0 +1,29 @@
+---
+import Base from "../layouts/Base.astro";
+import Card from "../components/Card.astro";
+import { portfolio } from "../data/portfolio";
+import { publishedPieceIds } from "../lib/pieces";
+
+const published = await publishedPieceIds();
+const featured = portfolio.filter((p) => p.featured);
+---
+<Base>
+  <div class="wrap">
+    <section class="intro">
+      <div class="eyebrow">Santa Fe, New Mexico</div>
+      <h1>Content that does the work.</h1>
+      <p>I'm Frank O'Mahony. I help real estate agents, local businesses, arts organizations and nonprofits tell their story, from content strategy and social media to case studies and long-form writing.</p>
+      <div class="actions">
+        <a class="button" href="/portfolio">See the portfolio</a>
+        <a class="button ghost" href="/contact">Get in touch</a>
+      </div>
+    </section>
+
+    <section class="featured">
+      <h2>Recent work</h2>
+      <div class="grid">
+        {featured.map((item) => <Card item={item} publishedPieces={published} />)}
+      </div>
+    </section>
+  </div>
+</Base>

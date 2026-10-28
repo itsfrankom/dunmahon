@@ -1,0 +1,23 @@
+---
+import Base from "../layouts/Base.astro";
+import { render } from "astro:content";
+import { getPublishedPieces } from "../lib/pieces";
+
+export async function getStaticPaths() {
+  const pieces = await getPublishedPieces();
+  return pieces.map((p) => ({ params: { piece: p.id }, props: { p } }));
+}
+
+const { p } = Astro.props;
+const { Content } = await render(p);
+---
+<Base title={p.data.title}>
+  <div class="wrap">
+    <article class="intro prose">
+      <div class="eyebrow">{p.data.client}</div>
+      <h1>{p.data.title}</h1>
+      <Content />
+      <p><a href="/portfolio">← Back to portfolio</a></p>
+    </article>
+  </div>
+</Base>

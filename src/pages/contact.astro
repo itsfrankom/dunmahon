@@ -1,0 +1,17 @@
+---
+import Base from "../layouts/Base.astro";
+import { site } from "../data/site";
+---
+<Base title="Contact" description="Get in touch with Frank O'Mahony.">
+  <div class="wrap">
+    <section class="intro prose">
+      <div class="eyebrow">Contact</div>
+      <h1>Let's talk.</h1>
+      <p>Working on content, social media or a story that needs telling? Send a note and I'll get back to you.</p>
+      <div class="actions">
+        <a class="button" href={`mailto:${site.email}`}>{site.email}</a>
+        <a class="button ghost" href="https://linkedin.com/in/itsfrankomahony" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </section>
+  </div>
+</Base>

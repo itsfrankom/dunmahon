@@ -1,0 +1,90 @@
+:root {
+  --paper: #faf7f2;
+  --ink: #1f1d1a;
+  --muted: #6b655c;
+  --line: #e4ddd1;
+  --accent: #b5482a;      /* terracotta */
+  --accent-soft: #f3e1d7;
+  --card: #ffffff;
+  --serif: "Fraunces", Georgia, serif;
+  --sans: "Inter", system-ui, -apple-system, sans-serif;
+}
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font: 400 17px/1.6 var(--sans);
+}
+img { max-width: 100%; display: block; }
+a { color: var(--accent); text-underline-offset: 3px; }
+h1, h2, h3 { font-family: var(--serif); font-weight: 600; line-height: 1.15; margin: 0 0 .5em; }
+h1 { font-size: clamp(2.2rem, 6vw, 3.6rem); letter-spacing: -0.01em; }
+h2 { font-size: clamp(1.5rem, 3.5vw, 2rem); }
+h3 { font-size: 1.2rem; }
+
+.wrap { max-width: 1120px; margin: 0 auto; padding: 0 16px; }
+@media (min-width: 720px) { .wrap { padding: 0 32px; } }
+
+/* Header */
+.site-header { border-bottom: 1px solid var(--line); background: var(--paper); }
+.header-inner { display: flex; flex-wrap: wrap; gap: 12px 28px; align-items: center; justify-content: space-between; padding-top: 18px; padding-bottom: 18px; }
+.brand { font-family: var(--serif); font-weight: 600; font-size: 1.35rem; color: var(--ink); text-decoration: none; }
+.brand span { display: block; font-family: var(--sans); font-size: .7rem; font-weight: 500; letter-spacing: .18em; text-transform: uppercase; color: var(--muted); }
+nav { display: flex; gap: 22px; }
+nav a { color: var(--ink); text-decoration: none; font-weight: 500; font-size: .95rem; padding: 4px 0; border-bottom: 2px solid transparent; }
+nav a:hover, nav a[aria-current="page"] { border-color: var(--accent); }
+
+/* Footer */
+.site-footer { border-top: 1px solid var(--line); margin-top: 80px; color: var(--muted); font-size: .9rem; }
+.footer-inner { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 24px; padding-top: 28px; padding-bottom: 28px; }
+.footer-inner p { margin: 0; }
+.social { display: flex; flex-wrap: wrap; gap: 16px; }
+.social a { color: var(--muted); }
+
+/* Page intro */
+.intro { padding: 56px 0 32px; max-width: 720px; }
+.intro p { font-size: 1.15rem; color: var(--muted); }
+.eyebrow { font-size: .75rem; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; color: var(--accent); margin-bottom: 12px; }
+
+/* Filters */
+.filters { display: flex; flex-wrap: wrap; gap: 8px; margin: 8px 0 28px; }
+.filters button {
+  font: 500 .88rem var(--sans); color: var(--ink); background: transparent;
+  border: 1px solid var(--line); border-radius: 999px; padding: 7px 14px; cursor: pointer;
+}
+.filters button[aria-pressed="true"] { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+
+/* Grid + cards */
+.grid { display: grid; gap: 20px; grid-template-columns: 1fr; }
+@media (min-width: 640px) { .grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 980px) { .grid { grid-template-columns: repeat(3, 1fr); } }
+.card {
+  background: var(--card); border: 1px solid var(--line); border-radius: 10px;
+  overflow: hidden; display: flex; flex-direction: column;
+}
+.card[hidden] { display: none; }
+.card .thumb { aspect-ratio: 16 / 9; background: var(--accent-soft); overflow: hidden; }
+.card .thumb img { width: 100%; height: 100%; object-fit: cover; }
+.card .body { padding: 18px 20px 20px; display: flex; flex-direction: column; gap: 6px; flex: 1; }
+.card .meta { font-size: .78rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+.card h3 { margin: 0; }
+.card p { margin: 0; color: var(--muted); font-size: .95rem; }
+.card ul { list-style: none; margin: 8px 0 0; padding: 0; display: grid; gap: 6px; }
+.card li a { font-weight: 500; font-size: .95rem; }
+.card li a::after { content: " →"; }
+
+.featured { margin-bottom: 56px; }
+.featured .grid { margin-top: 20px; }
+
+/* Prose pages */
+.prose { max-width: 680px; }
+.prose p, .prose li { font-size: 1.05rem; }
+.button {
+  display: inline-block; background: var(--accent); color: #fff; text-decoration: none;
+  font-weight: 600; padding: 12px 22px; border-radius: 8px;
+}
+.button.ghost { background: transparent; color: var(--ink); border: 1px solid var(--line); }
+.actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 24px; }

@@ -1,0 +1,42 @@
+---
+import Base from "../layouts/Base.astro";
+import Card from "../components/Card.astro";
+import { portfolio } from "../data/portfolio";
+import { publishedPieceIds } from "../lib/pieces";
+
+const published = await publishedPieceIds();
+const categories = [...new Set(portfolio.map((p) => p.category))];
+---
+<Base
+  title="Portfolio"
+  description="Writing and content portfolio: case studies, thought leadership, real estate content, blogs, columns and campaigns."
+>
+  <div class="wrap">
+    <section class="intro">
+      <div class="eyebrow">Portfolio</div>
+      <h1>Selected work</h1>
+      <p>Case studies, thought leadership, real estate content, columns and campaigns for clients in the US, UK, Ireland and Australia.</p>
+    </section>
+
+    <div class="filters" role="group" aria-label="Filter by type">
+      <button type="button" data-filter="all" aria-pressed="true">All</button>
+      {categories.map((c) => <button type="button" data-filter={c} aria-pressed="false">{c}</button>)}
+    </div>
+
+    <div class="grid">
+      {portfolio.map((item) => <Card item={item} publishedPieces={published} />)}
+    </div>
+  </div>
+
+  <script>
+    const buttons = document.querySelectorAll<HTMLButtonElement>(".filters button");
+    const cards = document.querySelectorAll<HTMLElement>(".card");
+    buttons.forEach((btn) =>
+      btn.addEventListener("click", () => {
+        const f = btn.dataset.filter;
+        buttons.forEach((b) => b.setAttribute("aria-pressed", String(b === btn)));
+        cards.forEach((c) => (c.hidden = f !== "all" && c.dataset.category !== f));
+      })
+    );
+  </script>
+</Base>
