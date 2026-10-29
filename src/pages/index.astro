@@ -25,5 +25,18 @@ const featured = portfolio.filter((p) => p.featured);
         {featured.map((item) => <Card item={item} publishedPieces={published} />)}
       </div>
     </section>
+
+    <section class="pulse-panel">
+      <a href="https://pulse.santafefrank.com" target="_blank" rel="noopener" class="pulse-logo">
+        <img src="/images/santa-fe-pulse-logo.png" alt="Santa Fe Pulse" width="400" height="95" />
+      </a>
+      <div class="pulse-copy">
+        <p>A free daily magazine about Santa Fe: arts, real estate, history, work, film and city hall, written fresh every morning.</p>
+        <div class="actions">
+          <a class="button" href="https://pulse.santafefrank.com" target="_blank" rel="noopener">Read today's issue</a>
+          <a class="button ghost" href="/pulse">Get it by email</a>
+        </div>
+      </div>
+    </section>
   </div>
 </Base>

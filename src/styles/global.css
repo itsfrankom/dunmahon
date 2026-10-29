@@ -130,3 +130,15 @@ article.prose p, article.prose li { color: var(--ink); font-size: 1.08rem; line-
 .aside-block p { margin: 0 0 12px; color: var(--muted); }
 .prose .hero { width: 100%; border-radius: 10px; margin: 8px 0 28px; }
 .prose .video { display: block; max-width: 560px; aspect-ratio: 1; background: #000; }
+
+/* Santa Fe Pulse */
+.pulse-logo { display: inline-block; }
+.pulse-logo img { width: 100%; max-width: 360px; height: auto; }
+.intro .pulse-logo { margin-bottom: 20px; border-radius: 8px; overflow: hidden; }
+.pulse-panel {
+  background: #f4efe7; border: 1px solid var(--line); border-radius: 12px;
+  padding: 28px 24px; display: grid; gap: 20px; align-items: center;
+}
+@media (min-width: 860px) { .pulse-panel { grid-template-columns: minmax(0, 380px) 1fr; gap: 40px; padding: 36px 40px; } }
+.pulse-copy p { margin: 0; font-size: 1.05rem; }
+.pulse-copy .actions { margin-top: 18px; }
