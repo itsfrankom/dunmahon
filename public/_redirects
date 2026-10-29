@@ -1,0 +1,3 @@
+# Cloudflare redirects for old Squarespace addresses that have sub-pages.
+/dunmahon-real-estate-matchmaker/* /pulse 301
+/nextstage/* / 301
