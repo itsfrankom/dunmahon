@@ -52,6 +52,15 @@ export const portfolio: PortfolioItem[] = [
     featured: true,
   },
   {
+    title: "Ahakista, Graham Norton's Place",
+    client: "Dunmahon Estates newsletter",
+    category: "Real estate",
+    description: "A short portrait of a Sheep's Head village on Dunmanus Bay, its famous resident and the charity quiz that sells out despite a 4 am queue.",
+    image: "/images/ahakista.webp",
+    imagePosition: "center 35%",
+    piece: "ahakista",
+  },
+  {
     title: "Maureen's Minute",
     client: "Maureen McCarthy, Boulder Realtor",
     category: "Real estate",
