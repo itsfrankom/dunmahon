@@ -177,8 +177,9 @@ export const portfolio: PortfolioItem[] = [
     links: [{ label: "Read the post", url: "https://www.surveymonkey.com/curiosity/3-reasons-why-it-cloud-investments-will-take-center-stage-in-2021/" }],
   },
   {
-    title: "Silicon Valley columns",
+    title: "So Long, Silicon Valley",
     client: "The Irish Times",
+    description: "A 2002 farewell to the Valley after ten years of Apple, Excite, PayPal and the dot-com ride, from my 'Letter from Silicon Valley' column.",
     category: "Columns & essays",
     image: "/images/silicon-valley-map.webp",
     piece: "irish-times-silicon-valley",

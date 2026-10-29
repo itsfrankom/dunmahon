@@ -1,18 +1,81 @@
 ---
 import Base from "../layouts/Base.astro";
+import { publishedPieceIds } from "../lib/pieces";
+
+const published = await publishedPieceIds();
+const irishTimesLive = published.has("irish-times-silicon-valley");
+
+// Companies and organisations. Add or remove names here.
+const clients = [
+  {
+    group: "Technology",
+    names: ["Invigorate Platform", "SurveyMonkey", "LiveTiles", "Apple (UK, USA)", "Trimble Navigation", "Oracle", "CBT Systems/Smartforce", "Excite@Home", "Corio", "OfficeClick", "Vendavo", "Confinity/PayPal", "Narus Inc", "Blue Martini Software", "Eversight Inc."],
+  },
+  { group: "Media", names: ["Irish Times"] },
+  {
+    group: "Government & public sector",
+    names: ["Enterprise Ireland (Silicon Valley)", "State of New Mexico, Economic Dev.", "Trust for Public Land", "City of Santa Fe, NM", "NM Film"],
+  },
+  {
+    group: "Non-profit & education",
+    names: ["St. John's College, Santa Fe", "New Mexico Community Foundation", "Buckaroo Ball, Inc.", "Pueblo of Pojoaque – Hilton Santa Fe Buffalo Thunder Resort", "London Business School"],
+  },
+  {
+    group: "Professional services",
+    names: ["Gibbs Hybrid Ltd", "Balderton Capital", "Spear Marketing Inc.", "RE/MAX Real Estate"],
+  },
+];
 ---
-<Base title="About Frank" description="Frank O'Mahony: content strategist, writer and Realtor in Santa Fe, New Mexico.">
+<Base
+  title="About Frank"
+  description="Frank O'Mahony: award-winning communicator, veteran of tech companies in the US and Europe, Realtor and writer, based in Santa Fe, New Mexico."
+>
   <div class="wrap">
     <section class="intro prose">
       <div class="eyebrow">About</div>
       <h1>Frank O'Mahony</h1>
-      <!-- TODO: paste your bio from the current About page here. -->
-      <p>Independent content strategy and communications consultant based in Santa Fe, New Mexico, and a Realtor.</p>
-      <p>I work with real estate agents, local businesses, arts organizations and nonprofits on content development and social media strategy, building on years of B2B writing for clients across the US, UK, Ireland and Australia, including a run of Silicon Valley columns for The Irish Times.</p>
-      <div class="actions">
-        <a class="button" href="/portfolio">See the work</a>
-        <a class="button ghost" href="/contact">Get in touch</a>
+      <p class="lede">Award-winning communicator, veteran of tech companies in the US and Europe, real estate investor, husband and Dad.</p>
+    </section>
+
+    <div class="prose about">
+      <p>I started my career in London, working for PR firms and ultimately for Apple Computer UK, as their public relations manager. Apple took me to their US headquarters in Cupertino, California, where I was their corporate PR manager for a while and subsequently spearheaded the public launch for Newton technology. Newton set the groundwork, together with General Magic's PDA, for the iPhone a decade later.</p>
+
+      <p>Following Apple I stayed in Silicon Valley, running communications for several startups including PayPal and Excite, as well as Oracle, Trimble and Vendavo. As an aside, {irishTimesLive ? <a href="/irish-times-silicon-valley">I also wrote</a> : "I also wrote"} a 'Letter from Silicon Valley' for the Irish Times newspaper.</p>
+
+      <h2>New Mexico and Spaceport America</h2>
+
+      <p>Leaving California for Santa Fe, New Mexico, I became head of marketing and communications for the State's Economic Development Department, reporting to the cabinet secretary and working closely with Governor Bill Richardson's office. After many years of lobbying to both Republican and Democratic administrations, NM State University, a successful science and tech research college, got the Santa Fe leadership interested in the possibilities of developing an aerospace cluster in Southern New Mexico. One of the US's largest research bases, White Sands Missile Range, is in the area, so the skies overhead were highly controlled and not busy.</p>
+
+      <p>To prepare the ground, I worked on a full rollout at the Paris Air Show, a leading aerospace venue, working remotely with a media agency, set designers and the exhibitors.</p>
+
+      <p>The X PRIZE Cup came first, followed by a relationship with Virgin Group in London. The truly spectacular Virgin Spaceport base followed. I handled the media for the Santa Fe announcement between Richard Branson and Governor Richardson, as well as collaborating with the administration on the 'ask' of legislative funding.</p>
+
+      <h2>What I bring</h2>
+
+      <p>Experienced with managing teams and hitting the ground running to produce measurable, impactful content (including thought leadership), crisis management, media relations, events and digital communications, including CMS and other platforms. Creative and nimble. Mentor and collaborative manager.</p>
+
+      <p>Smart, crisp writer. <a href="/portfolio">Visit my portfolio here</a>.</p>
+
+      <p>Little-known fact: for ten years I had a career as a Realtor® in Colorado and New Mexico. Interesting times, fascinating people, especially in Santa Fe. Still at it…</p>
+
+      <p>I am a dual Irish/US citizen, and so permitted to work in the USA, UK and EU.</p>
+    </div>
+
+    <section class="clients">
+      <h2>Companies and organisations I've been honoured to work for</h2>
+      <div class="client-grid">
+        {clients.map((c) => (
+          <div class="client-group">
+            <h3>{c.group}</h3>
+            <ul>{c.names.map((n) => <li>{n}</li>)}</ul>
+          </div>
+        ))}
       </div>
     </section>
+
+    <div class="actions">
+      <a class="button" href="/portfolio">See the work</a>
+      <a class="button ghost" href="/contact">Get in touch</a>
+    </div>
   </div>
 </Base>

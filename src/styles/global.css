@@ -92,3 +92,18 @@ nav a:hover, nav a[aria-current="page"] { border-color: var(--accent); }
 .card .thumb.logo img { object-fit: contain; padding: 22px 28px; }
 .brand img { height: 52px; width: auto; }
 @media (min-width: 720px) { .brand img { height: 60px; } }
+
+/* About page */
+.lede { font-family: var(--serif); font-size: 1.35rem !important; color: var(--ink) !important; line-height: 1.4; }
+.about h2 { margin-top: 1.6em; }
+.clients { margin-top: 56px; padding-top: 40px; border-top: 1px solid var(--line); }
+.client-grid { display: grid; gap: 28px; grid-template-columns: 1fr; margin-top: 20px; }
+@media (min-width: 640px) { .client-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 980px) { .client-grid { grid-template-columns: repeat(3, 1fr); } }
+.client-group h3 { font-family: var(--sans); font-size: .78rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--accent); margin-bottom: 10px; }
+.client-group ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+.client-group li { padding-left: 18px; position: relative; }
+.client-group li::before { content: "✓"; position: absolute; left: 0; color: var(--accent); font-size: .85em; }
+.prose hr { border: 0; border-top: 1px solid var(--line); margin: 2em 0; }
+.prose h3 { margin-top: 1.4em; }
+article.prose p, article.prose li { color: var(--ink); font-size: 1.08rem; line-height: 1.7; }
