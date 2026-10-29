@@ -88,3 +88,5 @@ nav a:hover, nav a[aria-current="page"] { border-color: var(--accent); }
 }
 .button.ghost { background: transparent; color: var(--ink); border: 1px solid var(--line); }
 .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 24px; }
+.card .thumb.logo { background: #fff; border-bottom: 1px solid var(--line); }
+.card .thumb.logo img { object-fit: contain; padding: 22px 28px; }

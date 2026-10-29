@@ -13,7 +13,7 @@ const external = (url: string) => /^https?:/.test(url);
 ---
 <article class="card" data-category={item.category}>
   {item.image && (
-    <div class="thumb">
+    <div class:list={["thumb", { logo: item.logo }]}>
       <img src={item.image} alt="" loading="lazy" onerror="this.parentElement.remove()" />
     </div>
   )}
