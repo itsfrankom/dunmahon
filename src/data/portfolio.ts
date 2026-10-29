@@ -145,7 +145,7 @@ export const portfolio: PortfolioItem[] = [
     category: "Campaigns & PR",
     image: "/images/gibbs-brochure.webp",
     square: true,
-    links: [{ label: "View the brochure", url: "http://bit.ly/gibbscorporate" }],
+    links: [{ label: "View the brochure (PDF)", url: "https://media.clippings.me/cuttingpdfs/961371/9566c668aad122f4b4a78c065abe0e93.pdf" }],
   },
   {
     title: "Building the Diverse Workforce, Brick by Brick",
