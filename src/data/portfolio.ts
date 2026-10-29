@@ -25,6 +25,7 @@ export interface PortfolioItem {
   image?: string;
   imagePosition?: string; // which part of an image to show when cropped, e.g. "center top"
   portrait?: boolean; // show a tall image (like a report cover) in full
+  square?: boolean; // show a square image (like a brochure cover) in full
   logo?: boolean; // show the whole image (for logos) instead of cropping
   links?: { label: string; url: string }[];
   piece?: string;
@@ -142,6 +143,8 @@ export const portfolio: PortfolioItem[] = [
     title: "Corporate Brochure",
     client: "Gibbs Hybrid",
     category: "Campaigns & PR",
+    image: "/images/gibbs-brochure.webp",
+    square: true,
     links: [{ label: "View the brochure", url: "http://bit.ly/gibbscorporate" }],
   },
   {
