@@ -23,6 +23,7 @@ export interface PortfolioItem {
   category: Category;
   description?: string;
   image?: string;
+  imagePosition?: string; // which part of a tall image to show, e.g. "center top"
   logo?: boolean; // show the whole image (for logos) instead of cropping
   links?: { label: string; url: string }[];
   piece?: string;
@@ -65,6 +66,8 @@ export const portfolio: PortfolioItem[] = [
     title: "2021 Annual Report",
     client: "Spire Healthcare",
     category: "Campaigns & PR",
+    image: "/images/spire-annual-report.webp",
+    imagePosition: "center 28%",
     description:
       "Project management across internal and external resources: approvals, photography and copy editing.",
     links: [{ label: "View the report (PDF)", url: "https://www.investors.spirehealthcare.com/media/cx0nbjuz/full-annual-report-2021.pdf" }],
