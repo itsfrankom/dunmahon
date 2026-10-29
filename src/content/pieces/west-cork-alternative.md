@@ -23,8 +23,6 @@ Compare that to the median U.S. home price of $436,800, and suddenly learning to
 
 Here's where West Cork really shines: the people. Americans often worry about being outsiders, but West Corkers have perfected the art of friendly curiosity without nosiness. They'll help you fix your car, invite you to traditional music sessions, and explain why putting ice in whiskey is technically legal but morally questionable, all while giving you space to decompress from whatever American madness drove you there.
 
-Local estate agent Siobhan O'Sullivan from Clonakilty notes: "Americans bring enthusiasm and fresh perspectives. They integrate quickly, especially once they discover our coffee culture rivals anything in Portland."
-
 ## The practical perks
 
 Beyond affordable housing and therapeutic levels of human decency, West Cork offers legitimate quality-of-life upgrades. The healthcare system won't bankrupt you (Ireland has universal healthcare). The education system consistently ranks in the global top 20s. And the commute to your remote job? Probably involves fewer road rage incidents and more sheep crossings.
