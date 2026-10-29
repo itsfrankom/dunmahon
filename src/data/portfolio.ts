@@ -69,7 +69,10 @@ export const portfolio: PortfolioItem[] = [
     ratio: "719 / 820",
     description:
       "Sample short-form videos for a top 1.5% Boulder agent, built to attract both buyers and sellers.",
-    links: [{ label: "Maureen McCarthy Homes", url: "https://maureenmccarthyhomes.com" }],
+    links: [
+      { label: "Watch the videos", url: "https://photos.icloud.com/shared/album/018v1VDV_VuBVJoha1vKKaGyA" },
+      { label: "Maureen McCarthy Homes", url: "https://maureenmccarthyhomes.com" },
+    ],
     featured: true,
   },
   {
