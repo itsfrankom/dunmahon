@@ -11,6 +11,7 @@ const pieces = defineCollection({
     title: z.string(),
     client: z.string(),
     draft: z.boolean().default(false),
+    image: z.string().optional(),
   }),
 });
 

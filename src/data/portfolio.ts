@@ -43,6 +43,15 @@ export const portfolio: PortfolioItem[] = [
     featured: true,
   },
   {
+    title: "The West Cork Alternative: Your Exit Strategy from American Chaos",
+    client: "Dunmahon Estates newsletter",
+    category: "Real estate",
+    description: "A tongue-in-cheek pitch to stressed-out Americans: affordable homes, universal healthcare and neighbours who wave, on Ireland's southwest coast.",
+    image: "/images/west-cork.webp",
+    piece: "west-cork-alternative",
+    featured: true,
+  },
+  {
     title: "Maureen's Minute",
     client: "Maureen McCarthy, Boulder Realtor",
     category: "Real estate",
@@ -62,7 +71,6 @@ export const portfolio: PortfolioItem[] = [
       { label: "Ace your listing presentation", url: "https://www.realtor.com/marketing/resources/how-to-ace-your-real-estate-listings/" },
       { label: "Tips for staging", url: "https://www.realtor.com/marketing/resources/tips-for-staging-a-home-to-sell/" },
     ],
-    featured: true,
   },
   {
     title: "2021 Annual Report",

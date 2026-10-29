@@ -16,6 +16,7 @@ const { Content } = await render(p);
     <article class="intro prose">
       <div class="eyebrow">{p.data.client}</div>
       <h1>{p.data.title}</h1>
+      {p.data.image && <img class="hero" src={p.data.image} alt="" />}
       <Content />
       <p><a href="/portfolio">← Back to portfolio</a></p>
     </article>
