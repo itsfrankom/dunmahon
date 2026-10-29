@@ -199,33 +199,11 @@ export const portfolio: PortfolioItem[] = [
     links: [{ label: "Read the article", url: "https://www.invigorateplatform.com/insights/planning-for-an-ipo-part-1-the-decision-to-float" }],
   },
   {
-    title: "Blog post",
-    client: "Lokalise",
-    category: "Blogs",
-    image: "/images/lokalise.webp",
-    logo: true,
-    piece: "lokalise-blogpost-231120",
-  },
-  {
-    title: "Press release draft",
-    client: "Totara",
-    category: "Campaigns & PR",
-    piece: "totara-press",
-  },
-  {
     title: "Direct mail campaign",
     client: "PLEX Canada (via Spear)",
     category: "Campaigns & PR",
     image: "/images/plex-direct-mail.webp",
     logo: true,
     links: [{ label: "View the campaign (PDF)", url: "https://media.clippings.me/cuttingpdfs/961367/3532e5bc633507bdc6bdca84cadaee0d.pdf" }],
-  },
-  {
-    title: "Event invite copywriting",
-    client: "Shell (via Spear)",
-    category: "Campaigns & PR",
-    image: "/images/shell-lubricants.webp",
-    logo: true,
-    links: [{ label: "View the invite", url: "https://drive.google.com/file/d/1l_X7pqGsYM0WYFaH0eVyH0Nnlg_cANFC/view?usp=sharing" }],
   },
 ];

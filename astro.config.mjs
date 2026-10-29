@@ -5,5 +5,7 @@ export default defineConfig({
   // Keep old Squarespace links working. Add more as "/old-path": "/new-path".
   redirects: {
     "/frankgomahony": "/frank-o-mahony",
+    "/lokalise-blogpost-231120": "/portfolio",
+    "/totara-press": "/portfolio",
   },
 });

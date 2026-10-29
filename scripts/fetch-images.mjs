@@ -20,9 +20,7 @@ const images = {
   "ipo.webp": "1619787885562-MAPHO2ZSVT8CQG8EF5IY/IPO+image.jpeg",
   "gibbs-hybrid-logo.webp": "1620214530888-C6C492XHYKBL06D0XX16/gibbs+hybrid+logo.png",
   "luxembourg.webp": "1607019189606-I7E5Q85L1ZBPU3MI1DEO/luxembourg-in-pictures-beautiful-places-to-photograph-old-quarter-luxembourg-city.jpg",
-  "lokalise.webp": "1619787987244-0MJSXP4IQFFR3VEJTOR6/LOKALISE_400x400.jpg",
   "plex-direct-mail.webp": "1611930512329-45S7LAC4SWTI1W1WLRH0/Screenshot+2021-01-29+at+14.26.07.png",
-  "shell-lubricants.webp": "1607009852478-1YA5RZN6WLNEXHXC8H57/Shell+lubricants.png",
 };
 
 const dir = join(process.cwd(), "public", "images");
