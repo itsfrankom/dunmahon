@@ -1,0 +1,16 @@
+---
+import Base from "../layouts/Base.astro";
+import ContactForm from "../components/ContactForm.astro";
+---
+<Base title="Santa Fe Pulse" description="Sign up for Santa Fe Pulse, a free daily magazine about Santa Fe: events, real estate, history, jobs, film and city government.">
+  <div class="wrap">
+    <section class="intro prose">
+      <div class="eyebrow">Santa Fe Pulse</div>
+      <h1>Santa Fe, every morning.</h1>
+      <p>A free daily magazine about Santa Fe: events, real estate, history, jobs, film and city government, delivered to your inbox.</p>
+    </section>
+    <div class="contact-layout single">
+      <ContactForm pulseOnly />
+    </div>
+  </div>
+</Base>

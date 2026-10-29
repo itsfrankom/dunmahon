@@ -9,5 +9,8 @@ export default defineConfig({
     "/totara-press": "/portfolio",
     "/social-values-can-drive-pocket-book-decisions": "/portfolio",
     "/business-travel-research": "/portfolio",
+    "/dunmahon-real-estate-matchmaker": "https://santafefrank.com",
+    "/nextstage": "/",
+    "/testimonials": "/frank-o-mahony",
   },
 });

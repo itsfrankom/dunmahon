@@ -3,7 +3,9 @@ export const site = {
   name: "Dunmahon Communications",
   owner: "Frank O'Mahony",
   tagline: "Content strategy and communications from Santa Fe, New Mexico.",
-  email: "frank@omahony.com", // ← confirm this is the address you want public
+  email: "frank@omahony.com",
+  phone: "505.455.6169",
+  phoneLink: "+15054556169",
   social: [
     { label: "LinkedIn", url: "https://linkedin.com/in/itsfrankomahony" },
     { label: "Instagram", url: "https://www.instagram.com/frankomahony/" },

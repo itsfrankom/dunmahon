@@ -1,0 +1,46 @@
+---
+// Form submissions are emailed to you by FormSubmit (formsubmit.co), a free
+// service with no account needed. The very first submission sends you a
+// one-time "confirm your email" message; click it and the form is live.
+import { site } from "../data/site";
+
+interface Props { pulseOnly?: boolean; }
+const { pulseOnly = false } = Astro.props;
+---
+<form class="contact-form" action={`https://formsubmit.co/${site.email}`} method="POST">
+  <input type="hidden" name="_subject" value={pulseOnly ? "New Santa Fe Pulse sign-up" : "New message from dunmahon.com"} />
+  <input type="hidden" name="_template" value="table" />
+  <input type="hidden" name="_captcha" value="false" />
+  <input type="hidden" name="_next" value="" data-next />
+  <input type="text" name="_honey" class="honey" tabindex="-1" autocomplete="off" aria-hidden="true" />
+
+  <label>Name
+    <input type="text" name="name" required autocomplete="name" />
+  </label>
+  <label>Email
+    <input type="email" name="email" required autocomplete="email" />
+  </label>
+
+  {pulseOnly ? (
+    <input type="hidden" name="Santa Fe Pulse" value="Yes, sign me up" />
+  ) : (
+    <>
+      <label>Message
+        <textarea name="message" rows="5"></textarea>
+      </label>
+      <label class="check">
+        <input type="checkbox" name="Santa Fe Pulse" value="Yes, sign me up" />
+        <span>Sign me up for <strong>Santa Fe Pulse</strong>, the free daily magazine about life in Santa Fe.</span>
+      </label>
+    </>
+  )}
+
+  <button class="button" type="submit">{pulseOnly ? "Subscribe" : "Send"}</button>
+</form>
+
+<script>
+  // After sending, return visitors to this site's thank-you page.
+  document.querySelectorAll<HTMLInputElement>("[data-next]").forEach((el) => {
+    el.value = `${location.origin}/thanks`;
+  });
+</script>
