@@ -26,6 +26,7 @@ export interface PortfolioItem {
   imagePosition?: string; // which part of an image to show when cropped, e.g. "center top"
   portrait?: boolean; // show a tall image (like a report cover) in full
   square?: boolean; // show a square image (like a brochure cover) in full
+  ratio?: string; // show the whole image at its own shape, e.g. "719 / 820"
   logo?: boolean; // show the whole image (for logos) instead of cropping
   links?: { label: string; url: string }[];
   piece?: string;
@@ -64,8 +65,10 @@ export const portfolio: PortfolioItem[] = [
     title: "Maureen's Minute",
     client: "Maureen McCarthy, Boulder Realtor",
     category: "Real estate",
+    image: "/images/maureen-mccarthy.webp",
+    ratio: "719 / 820",
     description:
-      "Sample short-form videos for a top 2% Boulder agent, built to attract both buyers and sellers.",
+      "Sample short-form videos for a top 1.5% Boulder agent, built to attract both buyers and sellers.",
     links: [{ label: "Maureen McCarthy Homes", url: "https://maureenmccarthyhomes.com" }],
     featured: true,
   },
