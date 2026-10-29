@@ -13,8 +13,6 @@ const images = {
   "livetiles-mentholatum.webp": "1624613586746-08JL3RUI7IV1PVVQ2T01/frank-dunmahon-customer-stories-livetiles-mentholatum.png",
   "livetiles-engie.webp": "1624613600459-V22YY5AT7R6L70LW8L16/frank-dunmahon-customer-stories-livetiles-engie.jpeg",
   "livetiles-creditsafe.webp": "1621545022688-AHZZ9WXZ0U5IX2ELD422/livetilesglobal-dunmahon-writing-portfolio.png",
-  "surveymonkey-social-values.webp": "1621544459405-8SPM7Y7R73FNNX5ZF5UV/Social-values-can-drive-pocket-book-decisions-dunmahon-writing-portfolio-survey-monkey.jpg",
-  "surveymonkey-travel.webp": "1621544347851-VXFQDZLN523I4PTWEQJY/americans-are-ready-to-travel-dunmahon-writing-portfolio-survey-monkey.jpg",
   "surveymonkey-cloud.webp": "1620212838974-D0J298CNVJPA5F2JBHFY/frank-omahony-writing-portfolio-survery-monkey-2021.jpg",
   "silicon-valley-map.webp": "1607097032428-J9LLS69DTSJI9K5902M0/Silicon-Valley-map_.jpg",
   "ipo.webp": "1619787885562-MAPHO2ZSVT8CQG8EF5IY/IPO+image.jpeg",

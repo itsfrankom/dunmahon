@@ -7,5 +7,7 @@ export default defineConfig({
     "/frankgomahony": "/frank-o-mahony",
     "/lokalise-blogpost-231120": "/portfolio",
     "/totara-press": "/portfolio",
+    "/social-values-can-drive-pocket-book-decisions": "/portfolio",
+    "/business-travel-research": "/portfolio",
   },
 });

@@ -148,6 +148,13 @@ export const portfolio: PortfolioItem[] = [
     links: [{ label: "View the brochure (PDF)", url: "https://media.clippings.me/cuttingpdfs/961371/9566c668aad122f4b4a78c065abe0e93.pdf" }],
   },
   {
+    title: "Making Black Lives Matter, Matter",
+    client: "Farida Gibbs, CEO, Gibbs Hybrid",
+    category: "Thought leadership",
+    description: "Thought leadership article for the CEO of Gibbs Hybrid.",
+    links: [{ label: "Read the article (PDF)", url: "https://clippingsme-assets-1.s3.amazonaws.com/cuttingpdfs/1146406/d0ac8db2697cee1e0d45f6f8a0b93931.pdf" }],
+  },
+  {
     title: "Building the Diverse Workforce, Brick by Brick",
     client: "Gibbs Hybrid",
     category: "Thought leadership",
@@ -161,20 +168,6 @@ export const portfolio: PortfolioItem[] = [
     category: "Case studies",
     image: "/images/luxembourg.webp",
     links: [{ label: "View the case study (PDF)", url: "https://www.gibbshybrid.com/wp-content/uploads/2019/01/Case-Study-Luxembourg-1.pdf" }],
-  },
-  {
-    title: "Social Values Can Drive Pocketbook Decisions",
-    client: "SurveyMonkey",
-    category: "Blogs",
-    image: "/images/surveymonkey-social-values.webp",
-    piece: "social-values-can-drive-pocket-book-decisions",
-  },
-  {
-    title: "Americans Are Ready to Travel",
-    client: "SurveyMonkey",
-    category: "Blogs",
-    image: "/images/surveymonkey-travel.webp",
-    piece: "business-travel-research",
   },
   {
     title: "3 Reasons IT Cloud Investments Will Take Center Stage",
