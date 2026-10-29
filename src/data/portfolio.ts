@@ -151,7 +151,7 @@ export const portfolio: PortfolioItem[] = [
     title: "Making Black Lives Matter, Matter",
     client: "Farida Gibbs, CEO, Gibbs Hybrid",
     category: "Thought leadership",
-    description: "Thought leadership article for the CEO of Gibbs Hybrid.",
+    description: "A first-person piece for the CEO of Gibbs Hybrid on racism in Britain after George Floyd's murder, and the practical steps a business can take through hiring, suppliers and partnerships.",
     links: [{ label: "Read the article (PDF)", url: "https://clippingsme-assets-1.s3.amazonaws.com/cuttingpdfs/1146406/d0ac8db2697cee1e0d45f6f8a0b93931.pdf" }],
   },
   {
