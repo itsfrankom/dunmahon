@@ -80,7 +80,7 @@ export const portfolio: PortfolioItem[] = [
     category: "Thought leadership",
     image: "/images/sjc-librarian.webp",
     imagePosition: "center 70%",
-    description: "Professional profile.",
+    description: "Profile interview with Elisabeth Long (A86), Sheridan Dean of University Libraries, Archives, and Museums at Johns Hopkins, on the changing nature of academic collections and what St. John's can learn.",
     links: [{ label: "Read the profile", url: "https://www.sjc.edu/news/how-culture-evolves-johnnie-librarian-view" }],
   },
   {
