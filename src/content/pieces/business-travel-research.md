@@ -1,9 +1,11 @@
 ---
 title: "I'm Ready to Soar!"
-client: "SurveyMonkey · 2021"
+client: "SurveyMonkey · Spring 2021"
 image: "/images/surveymonkey-ready-to-soar.webp"
 draft: false
 ---
+
+<p class="credit">Originally published by SurveyMonkey in spring 2021, as COVID vaccines rolled out and travel began to reopen.</p>
 
 *Americans are getting antsy and want to get out of the house.*
 

@@ -194,7 +194,7 @@ export const portfolio: PortfolioItem[] = [
   },
   {
     title: "I'm Ready to Soar!",
-    client: "SurveyMonkey",
+    client: "SurveyMonkey · Spring 2021",
     category: "Thought leadership",
     description: "A 2021 SurveyMonkey report on Americans' eagerness to fly again, for fun and for business, as the pandemic eased.",
     image: "/images/surveymonkey-ready-to-soar.webp",
