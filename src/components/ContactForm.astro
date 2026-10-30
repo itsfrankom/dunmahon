@@ -1,18 +1,18 @@
 ---
-// Form submissions are emailed to you by FormSubmit (formsubmit.co), a free
-// service with no account needed. The very first submission sends you a
-// one-time "confirm your email" message; click it and the form is live.
-import { site } from "../data/site";
+// Form submissions are emailed to you by Web3Forms (web3forms.com), a free
+// service. The access key below is tied to your inbox; it's designed to be
+// public, so it's safe in the page.
+const ACCESS_KEY = "5834a275-be06-42de-96fc-01756b1bdfa9";
 
 interface Props { pulseOnly?: boolean; }
 const { pulseOnly = false } = Astro.props;
 ---
-<form class="contact-form" action={`https://formsubmit.co/${site.email}`} method="POST">
-  <input type="hidden" name="_subject" value={pulseOnly ? "New Santa Fe Pulse sign-up" : "New message from dunmahon.com"} />
-  <input type="hidden" name="_template" value="table" />
-  <input type="hidden" name="_captcha" value="false" />
-  <input type="hidden" name="_next" value="" data-next />
-  <input type="text" name="_honey" class="honey" tabindex="-1" autocomplete="off" aria-hidden="true" />
+<form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+  <input type="hidden" name="access_key" value={ACCESS_KEY} />
+  <input type="hidden" name="subject" value={pulseOnly ? "New Santa Fe Pulse sign-up" : "New message from dunmahon.com"} />
+  <input type="hidden" name="from_name" value="dunmahon.com" />
+  <input type="hidden" name="redirect" value="" data-next />
+  <input type="checkbox" name="botcheck" class="honey" tabindex="-1" autocomplete="off" aria-hidden="true" />
 
   <label>Name
     <input type="text" name="name" required autocomplete="name" />
