@@ -8,7 +8,6 @@ export default defineConfig({
     "/lokalise-blogpost-231120": "/portfolio",
     "/totara-press": "/portfolio",
     "/social-values-can-drive-pocket-book-decisions": "/portfolio",
-    "/business-travel-research": "/portfolio",
     "/dunmahon-real-estate-matchmaker": "/pulse",
     "/nextstage": "/",
     "/testimonials": "/frank-o-mahony",

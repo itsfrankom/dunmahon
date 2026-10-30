@@ -19,7 +19,6 @@ Push to GitHub and the site rebuilds itself.
    - /totara-press
    - /lokalise-blogpost-231120
    - /social-values-can-drive-pocket-book-decisions
-   - /business-travel-research
 3. Paste your real bio into `src/pages/frank-o-mahony.astro`.
 4. Confirm the email in `src/data/site.ts`.
 5. Decide whether Dunmahon Estates (/dunmahon-real-estate-matchmaker) and The Next Stage (/nextstage) come across. If not, add redirects for them in `astro.config.mjs` (e.g. `"/nextstage": "https://your-substack-url"`).

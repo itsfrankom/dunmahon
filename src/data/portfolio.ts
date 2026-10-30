@@ -193,6 +193,14 @@ export const portfolio: PortfolioItem[] = [
     links: [{ label: "View the case study (PDF)", url: "https://www.gibbshybrid.com/wp-content/uploads/2019/01/Case-Study-Luxembourg-1.pdf" }],
   },
   {
+    title: "I'm Ready to Soar!",
+    client: "SurveyMonkey",
+    category: "Thought leadership",
+    description: "A 2021 SurveyMonkey report on Americans' eagerness to fly again, for fun and for business, as the pandemic eased.",
+    image: "/images/surveymonkey-ready-to-soar.webp",
+    piece: "business-travel-research",
+  },
+  {
     title: "3 Reasons IT Cloud Investments Will Take Center Stage",
     client: "SurveyMonkey",
     category: "Blogs",
