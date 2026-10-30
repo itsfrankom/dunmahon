@@ -15,7 +15,6 @@ const images = {
   "livetiles-creditsafe.webp": "1621545022688-AHZZ9WXZ0U5IX2ELD422/livetilesglobal-dunmahon-writing-portfolio.png",
   "surveymonkey-cloud.webp": "1620212838974-D0J298CNVJPA5F2JBHFY/frank-omahony-writing-portfolio-survery-monkey-2021.jpg",
   "silicon-valley-map.webp": "1607097032428-J9LLS69DTSJI9K5902M0/Silicon-Valley-map_.jpg",
-  "ipo.webp": "1619787885562-MAPHO2ZSVT8CQG8EF5IY/IPO+image.jpeg",
   "gibbs-hybrid-logo.webp": "1620214530888-C6C492XHYKBL06D0XX16/gibbs+hybrid+logo.png",
   "luxembourg.webp": "1607019189606-I7E5Q85L1ZBPU3MI1DEO/luxembourg-in-pictures-beautiful-places-to-photograph-old-quarter-luxembourg-city.jpg",
   "plex-direct-mail.webp": "1611930512329-45S7LAC4SWTI1W1WLRH0/Screenshot+2021-01-29+at+14.26.07.png",

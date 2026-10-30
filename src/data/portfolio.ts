@@ -132,6 +132,7 @@ export const portfolio: PortfolioItem[] = [
     title: "Customer Story: Entain",
     client: "LiveTiles",
     category: "Case studies",
+    image: "/images/livetiles-entain.webp",
     links: [{ label: "Read the story", url: "https://livetilesglobal.com/customer-stories/entain-bets-big-on-a-winning-culture/" }],
   },
   {
@@ -205,13 +206,6 @@ export const portfolio: PortfolioItem[] = [
     category: "Columns & essays",
     image: "/images/silicon-valley-map.webp",
     piece: "irish-times-silicon-valley",
-  },
-  {
-    title: "Planning for an IPO: The Decision to Float",
-    client: "Invigorate",
-    category: "Thought leadership",
-    image: "/images/ipo.webp",
-    links: [{ label: "Read the article", url: "https://www.invigorateplatform.com/insights/planning-for-an-ipo-part-1-the-decision-to-float" }],
   },
   {
     title: "Direct mail campaign",
