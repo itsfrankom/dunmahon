@@ -2,7 +2,18 @@
 export const site = {
   name: "Dunmahon Communications",
   owner: "Frank O'Mahony",
+  url: "https://dunmahon.com",
   tagline: "Content strategy and communications from Santa Fe, New Mexico.",
+  // Shown when a page is shared on LinkedIn, Threads, etc. (1200 × 630)
+  socialImage: "/images/social-card.png",
+  // Your profiles elsewhere, so search engines know they're all you.
+  profiles: [
+    "https://linkedin.com/in/itsfrankomahony",
+    "https://www.instagram.com/frankomahony/",
+    "https://threads.net/frankomahony",
+    "https://santafefrank.com",
+    "https://pulse.santafefrank.com",
+  ],
   email: "frank@omahony.com",
   phone: "505.455.6169",
   phoneLink: "+15054556169",

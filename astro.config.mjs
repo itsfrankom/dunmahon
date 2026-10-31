@@ -1,7 +1,17 @@
 import { defineConfig } from "astro/config";
+import sitemap from "@astrojs/sitemap";
 
 export default defineConfig({
-  site: "https://www.dunmahon.com",
+  // The one official address. Search engines are told every page lives here.
+  site: "https://dunmahon.com",
+  // Pages are /portfolio, not /portfolio/ (Cloudflare serves portfolio.html there).
+  trailingSlash: "never",
+  build: { format: "file" },
+  integrations: [
+    sitemap({
+      filter: (page) => !/\/(thanks|404)$/.test(page.replace(/\/$/, "")),
+    }),
+  ],
   // Keep old Squarespace links working. Add more as "/old-path": "/new-path".
   redirects: {
     "/frankgomahony": "/frank-o-mahony",

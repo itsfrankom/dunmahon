@@ -2,6 +2,7 @@
 title: "The West Cork Alternative: Your Exit Strategy from American Chaos"
 client: "Dunmahon Estates newsletter"
 image: "/images/west-cork.webp"
+imageAlt: "The white Baltimore Beacon on a clifftop above the sea in West Cork"
 draft: false
 ---
 

@@ -3,11 +3,47 @@ import Base from "../layouts/Base.astro";
 import Card from "../components/Card.astro";
 import { portfolio } from "../data/portfolio";
 import { publishedPieceIds } from "../lib/pieces";
+import { site } from "../data/site";
 
 const published = await publishedPieceIds();
 const featured = portfolio.filter((p) => p.featured);
+
+// Tells search engines who you are and what Dunmahon Communications does.
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": `${site.url}/#frank`,
+      name: site.owner,
+      url: site.url,
+      jobTitle: "Content strategist and communications consultant",
+      email: `mailto:${site.email}`,
+      telephone: site.phoneLink,
+      address: { "@type": "PostalAddress", addressLocality: "Santa Fe", addressRegion: "NM", addressCountry: "US" },
+      sameAs: site.profiles,
+    },
+    {
+      "@type": "ProfessionalService",
+      "@id": `${site.url}/#business`,
+      name: site.name,
+      url: site.url,
+      description: "Content strategy, social media and long-form writing for real estate agents, local businesses, arts organizations and nonprofits.",
+      founder: { "@id": `${site.url}/#frank` },
+      email: site.email,
+      telephone: site.phoneLink,
+      image: new URL(site.socialImage, site.url).href,
+      address: { "@type": "PostalAddress", addressLocality: "Santa Fe", addressRegion: "NM", addressCountry: "US" },
+      areaServed: "Santa Fe, New Mexico",
+    },
+  ],
+};
 ---
-<Base>
+<Base
+  fullTitle="Frank O'Mahony | Content Strategy & Communications, Santa Fe NM"
+  description="Frank O'Mahony helps real estate agents, local businesses, arts organizations and nonprofits in Santa Fe tell their story: content strategy, social media, case studies and long-form writing."
+  jsonLd={jsonLd}
+>
   <div class="wrap">
     <section class="intro">
       <div class="eyebrow">Santa Fe, New Mexico</div>

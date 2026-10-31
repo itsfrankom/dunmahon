@@ -1,6 +1,7 @@
 ---
 title: "So Long, Silicon Valley"
 client: "The Irish Times · April 2002"
+date: "2002-04"
 draft: false
 ---
 

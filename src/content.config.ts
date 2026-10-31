@@ -12,6 +12,9 @@ const pieces = defineCollection({
     client: z.string(),
     draft: z.boolean().default(false),
     image: z.string().optional(),
+    imageAlt: z.string().optional(),
+    // When it was first published, e.g. "2002-04". Used by search engines.
+    date: z.string().optional(),
   }),
 });
 

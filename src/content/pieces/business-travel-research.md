@@ -2,6 +2,7 @@
 title: "I'm Ready to Soar!"
 client: "SurveyMonkey · Spring 2021"
 image: "/images/surveymonkey-ready-to-soar.webp"
+date: "2021-04"
 draft: false
 ---
 

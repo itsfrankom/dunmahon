@@ -2,6 +2,8 @@
 import Base from "../layouts/Base.astro";
 import { render } from "astro:content";
 import { getPublishedPieces } from "../lib/pieces";
+import { portfolio } from "../data/portfolio";
+import { site } from "../data/site";
 
 export async function getStaticPaths() {
   const pieces = await getPublishedPieces();
@@ -10,13 +12,28 @@ export async function getStaticPaths() {
 
 const { p } = Astro.props;
 const { Content } = await render(p);
+
+// The summary from the portfolio card doubles as the page's search description.
+const card = portfolio.find((item) => item.piece === p.id);
+const description = card?.description ?? `${p.data.title}, by ${site.owner}.`;
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: p.data.title,
+  description,
+  author: { "@type": "Person", name: site.owner, url: site.url },
+  publisher: { "@type": "Organization", name: site.name, url: site.url },
+  mainEntityOfPage: new URL(`/${p.id}`, site.url).href,
+  ...(p.data.date && { datePublished: p.data.date }),
+  ...(p.data.image && { image: new URL(p.data.image, site.url).href }),
+};
 ---
-<Base title={p.data.title}>
+<Base title={p.data.title} description={description} type="article" image={p.data.image} jsonLd={jsonLd}>
   <div class="wrap">
     <article class="intro prose">
       <div class="eyebrow">{p.data.client}</div>
       <h1>{p.data.title}</h1>
-      {p.data.image && <img class="hero" src={p.data.image} alt="" />}
+      {p.data.image && <img class="hero" src={p.data.image} alt={p.data.imageAlt ?? ""} />}
       <Content />
       <p><a href="/portfolio">← Back to portfolio</a></p>
     </article>

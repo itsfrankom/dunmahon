@@ -2,6 +2,7 @@
 title: "Ahakista, Graham Norton's Place"
 client: "Dunmahon Estates newsletter"
 image: "/images/ahakista.webp"
+imageAlt: "Graham Norton with a group of Ahakista locals at an outdoor gathering"
 draft: false
 ---
 

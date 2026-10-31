@@ -2,10 +2,28 @@
 import { site } from "../data/site";
 import "../styles/global.css";
 
-interface Props { title?: string; description?: string; }
-const { title, description = site.tagline } = Astro.props;
-const fullTitle = title ? `${title} — ${site.name}` : site.name;
-const path = Astro.url.pathname.replace(/\/$/, "");
+interface Props {
+  title?: string;
+  description?: string;
+  fullTitle?: string; // use this exact title instead of "Title — Dunmahon Communications"
+  image?: string; // picture shown when the page is shared on social media
+  type?: "website" | "article";
+  noindex?: boolean; // keep a page (like "thank you") out of search results
+  jsonLd?: object | object[]; // structured data for search engines
+}
+const {
+  title,
+  description = site.tagline,
+  image = site.socialImage,
+  type = "website",
+  noindex = false,
+  jsonLd,
+} = Astro.props;
+const fullTitle = Astro.props.fullTitle ?? (title ? `${title} — ${site.name}` : site.name);
+const path = Astro.url.pathname.replace(/(\/index)?(\.html)?\/?$/, "");
+const canonical = new URL(path || "/", Astro.site).href;
+const imageUrl = new URL(image, Astro.site).href;
+const ld = jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : [];
 ---
 <!doctype html>
 <html lang="en">
@@ -14,10 +32,20 @@ const path = Astro.url.pathname.replace(/\/$/, "");
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{fullTitle}</title>
     <meta name="description" content={description} />
+    {noindex && <meta name="robots" content="noindex" />}
+    <link rel="canonical" href={canonical} />
+    <meta property="og:site_name" content={site.name} />
     <meta property="og:title" content={fullTitle} />
     <meta property="og:description" content={description} />
-    <meta property="og:type" content="website" />
-    <link rel="canonical" href={new URL(Astro.url.pathname, Astro.site)} />
+    <meta property="og:type" content={type} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={imageUrl} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={fullTitle} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={imageUrl} />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    {ld.map((d) => <script type="application/ld+json" set:html={JSON.stringify(d)} />)}
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />

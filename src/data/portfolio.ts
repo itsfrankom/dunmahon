@@ -23,6 +23,7 @@ export interface PortfolioItem {
   category: Category;
   description?: string;
   image?: string;
+  imageAlt?: string; // a short description of the image, for search engines and screen readers
   imagePosition?: string; // which part of an image to show when cropped, e.g. "center top"
   portrait?: boolean; // show a tall image (like a report cover) in full
   square?: boolean; // show a square image (like a brochure cover) in full
@@ -49,6 +50,7 @@ export const portfolio: PortfolioItem[] = [
     category: "Real estate",
     description: "A tongue-in-cheek pitch to stressed-out Americans: affordable homes, universal healthcare and neighbours who wave, on Ireland's southwest coast.",
     image: "/images/west-cork.webp",
+    imageAlt: "The white Baltimore Beacon on a clifftop above the sea in West Cork",
     piece: "west-cork-alternative",
     featured: true,
   },
@@ -58,6 +60,7 @@ export const portfolio: PortfolioItem[] = [
     category: "Real estate",
     description: "A short portrait of a Sheep's Head village on Dunmanus Bay, its famous resident and the charity quiz that sells out despite a 4 am queue.",
     image: "/images/ahakista.webp",
+    imageAlt: "Graham Norton with a group of Ahakista locals at an outdoor gathering",
     imagePosition: "center 35%",
     piece: "ahakista",
   },
@@ -66,6 +69,7 @@ export const portfolio: PortfolioItem[] = [
     client: "Maureen McCarthy, Boulder Realtor",
     category: "Real estate",
     image: "/images/maureen-mccarthy.webp",
+    imageAlt: "Maureen McCarthy of RE/MAX of Boulder, RealTrends Verified top 1.5% of real estate professionals",
     ratio: "719 / 820",
     description:
       "Sample short-form videos for a top 1.5% Boulder agent, built to attract both buyers and sellers.",
